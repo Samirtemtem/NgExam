@@ -1,0 +1,15 @@
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
