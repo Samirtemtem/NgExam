@@ -17,7 +17,10 @@ message: { [key: string]: string } = {
   required: 'Ce champ est obligatoire',
   minlength: 'La description doit contenir au moins 10 caractères',
 };
- constructor(private fb: FormBuilder,private _consumerService:ConsumerService) {}
+ constructor(private fb: FormBuilder,
+  
+  private _consumerService: ConsumerService,
+ ) {}
  ngOnInit() {
 
   this.menuForm = this.fb.group({

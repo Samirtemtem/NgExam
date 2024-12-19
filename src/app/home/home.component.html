@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="home-container">
+
+    
+    <div class="menus-container">
+        <app-menu *ngFor="let menu of Menus" 
+                  [title]="menu.title"
+                  [image]="menu.image"
+                  [id]="menu.id">
+        </app-menu>
+    </div>
+</div>

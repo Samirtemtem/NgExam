@@ -1,0 +1,8 @@
+<div class="menu-card">
+    <h2>{{title}}</h2>
+    <img [src]="image" [alt]="title">
+    <div class="menu-actions">
+        <button [routerLink]="['/details',id]" class="details-link">Détails</button>
+        <button class="reserve-button" (click)="reserveMenu(id)">Réserver</button>
+    </div>
+</div>

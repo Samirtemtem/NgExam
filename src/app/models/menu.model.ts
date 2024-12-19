@@ -5,5 +5,5 @@ image ! : string
 description ! : string
 mark !: number
 approved ! : boolean
-reservations !: number []
+reservations !: any []
 }

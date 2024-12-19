@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddMenuComponentComponent } from './add-menu-component/add-menu-component.component';
-import { MenuRoutingModule } from './menu-routing.module';
+import { MenuComponent } from './menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ConsumerService } from '../consumer-service.service';
+import { FormsModule } from '@angular/forms';
+import { AddMenuComponentComponent } from './add-menu-component/add-menu-component.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AddMenuComponentComponent
-  ],
+  declarations: [MenuComponent, AddMenuComponentComponent],
   imports: [
     CommonModule,
-    MenuRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule
   ],
-  providers: [ConsumerService]
+  exports: [MenuComponent]
 })
 export class MenuModule { }

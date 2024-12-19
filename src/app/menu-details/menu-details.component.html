@@ -1,1 +1,22 @@
-<p>menu-details works!</p>
+<p>Menu {{menu.title}}</p>
+<div>
+    entreé : {{menu.description}}
+    <div *ngIf="menu.mark">
+        note : {{menu.mark}}
+    </div>
+    <div *ngIf="menu.mark<1">
+        Aucune note n’est attribuée à ce menu 
+       </div>
+    <input type="number" 
+           name="note" 
+           placeholder="note" 
+           [(ngModel)]="newmark" 
+           min="1" 
+           max="5"
+           #noteInput="ngModel">
+    <div *ngIf="noteInput.value && (noteInput.value < 1 || noteInput.value > 5)" class="error-message">
+        Veuillez saisir une note entre 1 et 5
+    </div>
+    
+    <button (click)="addMark()">Noter</button>
+</div>

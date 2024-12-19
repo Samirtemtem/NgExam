@@ -1,1 +1,36 @@
-{}
+{
+  "menus": [
+    {
+      "id": "c385",
+      "title": "qqweqw",
+      "description": "ewqeqweqweqw",
+      "approved": true,
+      "mark": 0,
+      "reservations": [
+        "c385",
+        "c385",
+        "c385",
+        "c385",
+        "c385",
+        "c385",
+        "c385",
+        "c385",
+        "c385"
+      ]
+    },
+    {
+      "id": "c385",
+      "title": "qqweqw",
+      "description": "ewqeqweqweqw",
+      "approved": false,
+      "mark": 0
+    },
+    {
+      "id": "c385",
+      "title": "qqweqw",
+      "description": "ewqeqweqweqw",
+      "approved": false,
+      "mark": 0
+    }
+  ]
+}

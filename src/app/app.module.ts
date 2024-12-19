@@ -9,6 +9,10 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { MenuDetailsComponent } from './menu-details/menu-details.component';
 import { HomeComponent } from './home/home.component';
+import { ConsumerService } from './consumer-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuModule } from './menu/menu.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,13 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    MenuModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ConsumerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
