@@ -17,7 +17,7 @@ message: { [key: string]: string } = {
   required: 'Ce champ est obligatoire',
   minlength: 'La description doit contenir au moins 10 caractères',
 };
- constructor(private fb: FormBuilder,private consumerService:ConsumerService) {}
+ constructor(private fb: FormBuilder,private _consumerService:ConsumerService) {}
  ngOnInit() {
 
   this.menuForm = this.fb.group({
@@ -40,7 +40,7 @@ submit(){
   this.menu.approved=false;
   this.menu.mark=0;
   console.log(this.menu);
-  this.consumerService.add<Menu>('menus',this.menu).subscribe({
+  this._consumerService.add<Menu>('menus',this.menu).subscribe({
     next: (response) => {
       console.log('Menu added successfully', response);
     },
